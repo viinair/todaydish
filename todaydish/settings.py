@@ -26,6 +26,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'django-insecure-5v6cekaujforf8)5&io#csl_&y&xf$67c^ds)$x(74h7*r9$48'
 
 # Application definition
 
