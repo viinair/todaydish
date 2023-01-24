@@ -1,8 +1,14 @@
 import random
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 from .models import Dish
 
+
 def randomDishView(request):
-    dish = random.choice(Dish.objects.all())
-    return HttpResponse(dish.name)
+    dish = {"breakfast": random.choice(Dish.objects.all()).name, "lunch": random.choice(
+        Dish.objects.all()).name, "dinner": random.choice(Dish.objects.all()).name}
+    return JsonResponse(dish)
+
+
+def welcomeView(request):
+    return HttpResponse('Welcome to Today\'s Dish')

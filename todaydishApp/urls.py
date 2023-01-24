@@ -1,7 +1,5 @@
 
 from django.urls import path
-from .views import randomDishView
+from .views import randomDishView, welcomeView
 
-urlpatterns = [path('dish/' , randomDishView, name='randomDish')]
-
-
+urlpatterns = [path('dish/' , randomDishView),path('' , welcomeView) ]
